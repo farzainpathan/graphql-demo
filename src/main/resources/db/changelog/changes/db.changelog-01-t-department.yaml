@@ -1,0 +1,116 @@
+databaseChangeLog:
+  - changeSet:
+      id: 00.00.01.00
+      author: farzainsana.pathan
+      changes:
+        - createTable:
+            catalogName: Library
+            tableName: T_DEPARTMENT
+            columns:
+              - column:
+                  name: ID
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK_T_DEPARTMENT
+              - column:
+                  name: DEPARTMENT_NAME
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: DEPARTMENT_ID
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: HOD_NAME
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: COLLEGE_NAME
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: PRINCIPAL_NAME
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+        - createSequence:
+            sequenceName: SEQ_T_DEPARTMENT
+            startValue: 4
+            incrementBy: 1
+
+  - changeSet:
+      id: 00.00.01.01
+      author: farzainsana.pathan
+      changes:
+        - insert:
+            tableName: T_DEPARTMENT
+            columns:
+              - column:
+                  name: ID
+                  value: 1
+              - column:
+                  name: DEPARTMENT_NAME
+                  value: CS
+              - column:
+                  name: DEPARTMENT_ID
+                  value: CS-001
+              - column:
+                  name: HOD_NAME
+                  value: Paul Walker
+              - column:
+                  name: COLLEGE_NAME
+                  value: PESIT
+              - column:
+                  name: PRINCIPAL_NAME
+                  value: Farzain Pathan
+
+        - insert:
+            tableName: T_DEPARTMENT
+            columns:
+              - column:
+                  name: ID
+                  value: 2
+              - column:
+                  name: DEPARTMENT_NAME
+                  value: IS
+              - column:
+                  name: DEPARTMENT_ID
+                  value: IS-001
+              - column:
+                  name: HOD_NAME
+                  value: John Rambo
+              - column:
+                  name: COLLEGE_NAME
+                  value: PESIT
+              - column:
+                  name: PRINCIPAL_NAME
+                  value: Farzain Pathan
+
+        - insert:
+            tableName: T_DEPARTMENT
+            columns:
+              - column:
+                  name: ID
+                  value: 3
+              - column:
+                  name: DEPARTMENT_NAME
+                  value: MCA
+              - column:
+                  name: DEPARTMENT_ID
+                  value: MCA-001
+              - column:
+                  name: HOD_NAME
+                  value: Slade Wilson
+              - column:
+                  name: COLLEGE_NAME
+                  value: PESIT
+              - column:
+                  name: PRINCIPAL_NAME
+                  value: Farzain Pathan
