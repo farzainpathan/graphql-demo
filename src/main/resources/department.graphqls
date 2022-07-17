@@ -1,0 +1,17 @@
+schema {
+    query: Query
+}
+
+type Query {
+    findDepartmentId(id: String): Department
+    getAllDepartment: [Department]
+}
+
+type Department {
+    id: ID
+    departmentName: String
+
+    hodName: String
+    collegeName: String
+    principalName: String
+}
